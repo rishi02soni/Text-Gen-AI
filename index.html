@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Generator - Create Amazing Content</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h2>✨ TextGen AI</h2>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#generator">Generator</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero/Dome Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Generate Amazing Text with AI</h1>
+                <p class="hero-subtitle">Transform your ideas into compelling content using our advanced AI text generation technology. Perfect for writers, marketers, and content creators.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToGenerator()">Start Generating</button>
+                    <button class="btn-secondary">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <div class="card-content">
+                        <div class="typing-animation">
+                            <span>Generating amazing content...</span>
+                            <div class="cursor"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About TextGen AI</h2>
+                <p>Revolutionizing content creation with artificial intelligence</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Fast Generation</h3>
+                    <p>Generate high-quality text in seconds, not hours. Our AI processes your input instantly and delivers creative results.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Precise Results</h3>
+                    <p>Get exactly what you need with our advanced algorithms that understand context and deliver relevant content.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">💡</div>
+                    <h3>Creative Ideas</h3>
+                    <p>Unlock your creativity with AI-powered suggestions that help you think outside the box and create unique content.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generator Section -->
+    <section id="generator" class="generator-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>AI Text Generator</h2>
+                <p>Enter your prompt and let our AI create amazing content for you</p>
+            </div>
+            <div class="generator-container">
+                <div class="input-section">
+                    <div class="input-group">
+                        <label for="userInput">Enter your words or prompt:</label>
+                        <textarea 
+                            id="userInput" 
+                            placeholder="Type your prompt here... (e.g., 'Write a story about a magical forest' or 'Create a product description for a smartphone')"
+                            rows="4"
+                        ></textarea>
+                    </div>
+                    <div class="generate-controls">
+                        <button id="generateBtn" class="btn-generate" onclick="generateText()">
+                            <span class="btn-text">Generate Text</span>
+                            <span class="btn-loader" style="display: none;">
+                                <div class="spinner"></div>
+                                Generating...
+                            </span>
+                        </button>
+                        <button id="clearBtn" class="btn-clear" onclick="clearAll()">Clear All</button>
+                    </div>
+                </div>
+                <div class="output-section">
+                    <div class="output-header">
+                        <h3>Generated Content</h3>
+                        <button id="copyBtn" class="btn-copy" onclick="copyToClipboard()" style="display: none;">
+                            📋 Copy
+                        </button>
+                    </div>
+                    <div id="output" class="output-content">
+                        <div class="placeholder">
+                            <div class="placeholder-icon">✨</div>
+                            <p>Your generated text will appear here...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>Have questions or feedback? We'd love to hear from you!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>ankush654123@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div>
+                            <h4>Support</h4>
+                            <p>Available 24/7 for assistance</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🌐</div>
+                        <div>
+                            <h4>Social</h4>
+                            <p>Follow us for updates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>✨ TextGen AI</h3>
+                    <p>Empowering creativity with artificial intelligence</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#support">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
